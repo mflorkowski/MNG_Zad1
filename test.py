@@ -13,7 +13,18 @@ class EmailExtractorTestCase(unittest.TestCase):
             ["jan.kowalski@student.wat.edu.pl", True, True, "Jan", "Kowalski"],
             ["anna.nowak@student.wat.edu.pl", True, False, "Anna", "Nowak"],
             ["adrianna.abacka01@student.wat.edu.pl", True, False, "Adrianna", "Abacka"],
-            ["katarzyna.babacka@wat.edu.pl", False, False, "Katarzyna", "Babacka"], ]
+            ["katarzyna.babacka@wat.edu.pl", False, False, "Katarzyna", "Babacka"],
+            ["julia.kowalska@student.wat.edu.pl", True, False, "Julia", "Kowalska"],
+            ["adam.nowak@student.wat.edu.pl", True, True, "Adam", "Nowak"],
+            ["agnieszka.mazur@wat.edu.pl", False, False, "Agnieszka", "Mazur"],
+            ["piotr.kaminski@student.wat.edu.pl", True, True, "Piotr", "Kaminski"],
+            ["katarzyna.adamczyk@student.wat.edu.pl", True, False, "Katarzyna", "Adamczyk"],
+            ["marcin.wojciechowski@wat.edu.pl", False, True, "Marcin", "Wojciechowski"],
+            ["anna.lis@student.wat.edu.pl", True, False, "Anna", "Lis"],
+            ["krzysztof.pawlak@student.wat.edu.pl", True, True, "Krzysztof", "Pawlak"],
+            ["ewa.nowicka@wat.edu.pl", False, False, "Ewa", "Nowicka"],
+            ["jan.jakubowski@student.wat.edu.pl", True, True, "Jan", "Jakubowski"]
+        ]
 
     def test_is_student(self):
         for x in self.data:
@@ -24,7 +35,6 @@ class EmailExtractorTestCase(unittest.TestCase):
                 # then
                 extractor = EmailExtractor(email)
                 # expect
-                print(extractor.is_student())
                 self.assertEqual(is_student, extractor.is_student())
 
     def test_get_surname(self):
