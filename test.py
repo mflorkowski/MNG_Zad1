@@ -19,7 +19,7 @@ class EmailExtractorTestCase(unittest.TestCase):
         for x in self.data:
             with self.subTest():
                 # given
-                emailmail = x[0]
+                email = x[0]
                 is_student = x[1]
                 # then
                 extractor = EmailExtractor(email)
