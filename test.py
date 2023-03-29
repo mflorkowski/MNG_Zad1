@@ -9,6 +9,7 @@ class EmailExtractorTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.data = [
             # email, is_student, is_male, name, surname
+            # nie może być polskich znaków
             ["norbert.waszkowiak@wat.edu.pl", False, True, "Norbert", "Waszkowiak"],
             ["jan.kowalski@student.wat.edu.pl", True, True, "Jan", "Kowalski"],
             ["anna.nowak@student.wat.edu.pl", True, False, "Anna", "Nowak"],
